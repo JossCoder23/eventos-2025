@@ -1,0 +1,389 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+// .bloque4 {
+//     background-color: red;
+//     height: auto;
+//     .bloque4Container {
+//         width: v.$width_mobile;
+//         background-color: green;
+//     }
+// }
+
+.bloque4 {
+    height: auto;
+    // background-color: purple;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    row-gap: 2rem;
+    padding: 5.5rem 0 3rem 0;
+    position: relative;
+    // padding-top: 5.5rem;
+    @include m.tablet_768 {
+        overflow: normal;
+    }
+    @include m.desktop_1020 {
+        padding: 7rem 0 5rem 0;
+    }
+}
+
+.bloque1TopBackMovil {
+    width: 30rem;
+    position: absolute;
+    right: -10rem;
+    bottom: -15rem;
+    @include m.tablet_768 {
+        width: 40rem;
+        bottom: -23rem;
+        right: -12rem;
+    }
+}
+
+.bloque4Title {
+    width: v.$width_mobile;
+    @include m.desktop_1020 {
+        width: v.$width_desktop_1020;
+    }
+    h3 {
+        margin: 0;
+        text-align: center;
+        font-size: 2.3rem;
+        @include m.desktop_1020 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.bloque4Slider {
+    position: relative;
+    z-index: 5 !important;
+    // overflow: hidden;
+    width: 100%;
+    margin-top: 3rem;
+    overflow: normal;
+    // background-color: red;
+    // padding-bottom: 6rem;
+    @include m.tablet_768 {
+        overflow: normal !important;    
+    }
+    @include m.desktop_1020 {
+        width: 100%;
+        // padding-left: 6rem;
+    }
+    // @include m.desktop_1200 {
+    //     padding-left: 0;
+    // }
+}
+
+.slider__container {
+    height: auto;
+    // position: relative;
+    width: 100%;
+    overflow: normal;
+    @include m.tablet_760 {
+        max-width: 65rem;
+    }
+    @include m.desktop_1000 {
+        overflow: hidden;
+        // width: 50%;
+    }
+    @include m.desktop_1020 {
+        // max-width: v.$max-width-1020;
+        // max-width: 50rem;
+        max-width: 100%;
+        display: grid !important;
+        // grid-template-columns: repeat(4, 1fr);
+        // height: 28rem;
+        height: auto;
+        width: 100%;
+        // background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 3rem !important;
+        // background-color: red;
+    }
+    @include m.desktop_1200 {
+        // width: 75rem;
+    }
+}
+  
+.slider__grid {
+    // position: relative;
+    display: flex;
+    height: auto;
+    position: relative;
+    overflow: normal;
+    @include m.tablet_768 {
+        overflow: normal !important;
+    }
+    @include m.desktop_1020 {
+        height: 100%;
+        // position: absolute;
+        display: flex;
+        column-gap: 3rem;
+        width: 100%;
+        // background-color: green;
+    }
+    @include m.desktop_1220 {
+        // padding-top: 3rem;
+    }
+}
+
+.slider__item.swiper-slide {
+    // margin-top: 4rem;
+    height: auto;
+    // position: relative;
+    display: grid !important;
+    width: 100%;
+    // background-color: green;
+    height: auto;
+    // align-content: center;
+    justify-items: center;
+    overflow: normal;
+    // margin-bottom: 3rem;
+    padding: 1rem 0;
+    @include m.tablet_760 {
+        // padding-bottom: 8rem;
+    }
+    @include m.desktop_1020 {
+        padding-bottom: 0;
+        // margin-top: 4rem !important;
+        overflow: visible !important;
+        width: 18rem !important;
+        // width: 36.5% !important;
+        // background-color: purple;
+    }
+    @include m.desktop_1020 {
+        justify-items: flex-start;
+    }
+    @include m.desktop_1200 {
+        width: 22rem !important;
+    }
+}
+  
+  
+  //ancho-individual
+.sliderItemInfo {
+    // background-color: purple;
+    width: 18rem;
+    height: auto;
+    border-radius: 1rem;
+    z-index: 3;
+    display: flex;
+    // row-gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid white;
+    // padding: 2rem 0;
+    padding-bottom: 2rem;
+    // top: -3rem;
+    position: relative;
+    // background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.55);
+    @include m.desktop_1200 {
+        // padding: 3rem 0;
+        width: 20rem;
+    }
+    img {
+        width: 10rem;
+        position: relative;
+        top: -3rem;
+    }
+    h3 {
+        margin: 0;
+        text-align: center;
+        font-size: 1.8rem;
+        top: -2rem;
+        position: relative;
+    }
+    p {
+        position: relative;
+        top: -1rem;
+        margin: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0 2rem;
+    }
+}
+
+.swiper {
+    overflow: visible !important;
+}
+
+// .swiper-arrows2 {
+//     // background-color: orange;
+//     position: absolute;
+//     width: 100%;
+//     text-align: center;
+//     bottom: 0;
+//     height: auto;
+//     @include m.desktop_1020 {
+//         bottom: 2rem;
+//         width: 38rem;
+//     }
+//     // @include m.desktop_1060 {
+//     //     width: 74%;
+//     // }
+//     // @include m.desktop_1120 {
+//     //     width:75%;
+//     // }
+//     h3 {
+//         margin: 0;
+//         font-size: 4rem;
+//         font-weight: lighter;
+//         color: white;
+//         z-index: 30;
+//         position: relative;
+//         // z-index: 201;
+//     }
+// }
+  
+.swiper-button-next {
+    // height: 4.5rem;
+    width: auto;
+    height: 3rem;
+    color: black !important;
+    text-rendering: auto;
+    z-index: 30;
+    position: absolute !important;
+    bottom: .5rem;
+    right: 1.5rem !important;
+    @include m.phone_360 {
+        right: 2.5rem !important;    
+    }
+    @include m.phone_390 {
+        right: 3.5rem !important;  
+    }
+    @include m.phone_400 {
+        right: 4.5rem !important;  
+    }
+    @include m.tablet_768 {
+        right: 2.5rem !important;
+    }
+    @include m.desktop_1020 {
+        bottom: 2.5rem;
+        right: 15.5rem !important;
+    }
+    @include m.desktop_1100 {
+        right: 19.5rem !important;
+    }
+    @include m.desktop_1300 {
+        right: 25.5rem !important;
+    }
+    @include m.desktop_1400 {
+        right: 30.5rem !important;    
+    }
+    @include m.desktop_1500 {
+        right: 35.5rem !important;
+    }
+    @include m.desktop_1600 {
+        right: 40.5rem !important;
+    }
+    @include m.desktop_1900 {
+        right: 54.5rem !important;
+    }
+    img {
+        width: 1.3rem;
+    }
+}
+  
+.swiper-button-prev {
+    // height: 4.5rem;
+    // background-color: red;
+    width: auto;
+    height: 3rem;
+    color: black !important;
+    position: absolute !important;
+    // left: 2rem !important;
+    text-rendering: auto;
+    z-index: 30;
+    bottom: .5rem;
+    left: 1.5rem !important;
+    @include m.phone_360 {
+        left: 2.5rem !important;    
+    }
+    @include m.phone_390 {
+        left: 3.5rem !important;  
+    }
+    @include m.phone_400 {
+        left: 4.5rem !important;  
+    }
+    @include m.tablet_768 {
+        left: 2.5rem !important; 
+    }
+    @include m.desktop_1020 {
+        bottom: 2.5rem;
+        left: 12.5rem !important;
+    }
+    @include m.desktop_1100 {
+        left: 15.5rem !important;
+    }
+    @include m.desktop_1300 {
+        left: 21.5rem !important;
+    }
+    @include m.desktop_1400 {
+        left: 25.5rem !important;
+    }
+    @include m.desktop_1500 {
+        left: 31.5rem !important;
+    }
+    @include m.desktop_1600 {
+        left: 36.5rem !important;
+    }
+    @include m.desktop_1900 {
+        left: 51.5rem !important;
+    }
+    img {
+        width: 1.3rem;
+    }
+}
+
+.swiper-pagination {
+    position: relative !important;
+    display: block !important;
+    top: auto !important;
+    bottom: auto !important;
+    @include m.desktop_1020 {
+        display: none !important;
+    }
+}
+
+.bullet {
+    background-color: black !important;
+    color: black !important;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+}
+
+.bullet.swiper-pagination-bullet {
+    color: black !important;
+    background-color: black !important;
+    opacity: 1 !important;
+    // transition: all .5s ease-in-out;
+}
+
+.bullet.swiper-pagination-bullet-active {
+    background-color: v.$color1 !important;
+    width: 2.5rem !important;
+    border-radius: .5rem !important;
+    transition: all .5s ease-in-out;
+}
+
+.bloque2Subtitle {
+    position: relative;
+    z-index: 10;
+    h5 {
+        margin: 0;
+        font-size: 1.1rem;
+        @include m.desktop_1100 {
+            font-size: 1.3rem;
+        }
+    }
+}

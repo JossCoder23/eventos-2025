@@ -1,0 +1,49 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque2 {
+    background-color: v.$color1;
+    height: 6rem;
+    width: 100%;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    overflow: hidden; 
+    position: relative;
+}
+
+.bloque2Container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap; 
+    position: absolute;
+    animation: scroll-right 5s linear infinite; 
+
+    img {
+        width: 2rem;
+        height: auto;
+        margin-right: 0.2rem;
+    }
+
+
+    h3 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin: 0 3rem; 
+        display: inline-block;
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+
+@keyframes scroll-right {
+    from {
+        transform: translateX(-10%); 
+    }
+    to {
+        transform: translateX(0); 
+    }
+}
+

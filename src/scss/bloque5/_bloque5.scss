@@ -1,0 +1,104 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque5 {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5.5rem;
+    .bloque5Container {
+        width: v.$width_mobile;
+        // background-color: green;
+        @include m.desktop_1020 {
+            width: 60rem;
+        }
+        @include m.desktop_1200 {
+            width: 70rem;
+        }
+    }
+}
+
+.bloque5ContainerInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    .bloque5ContainerInfo--item {
+        // background-color: purple;
+        display: flex;
+        // border-radius: 1rem;
+        height: 4rem;
+        @include m.desktop_1020 {
+            height: 5.5rem;
+        }
+        h3, h4 {
+            font-size: 1.8rem;
+            margin: 0;
+            
+        }
+        h3 {
+            width: 35%;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            @include m.desktop_1020 {
+                border-top-left-radius: 1.8rem;
+                border-bottom-left-radius: 1.8rem;
+            }
+        }
+        h4 {
+            width: 65%;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background-color: #D5D5D5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include m.desktop_1020 {
+                border-top-right-radius: 1.8rem;
+                border-bottom-right-radius: 1.8rem;
+            }
+        }
+    }
+
+}
+
+.bloque5ContainerDirection {
+    h4 {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+        @include m.desktop_1020 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.bloque5Button {
+    display: flex;
+    justify-content: center;
+    button {
+        width: 18rem;
+        height: 4.5rem;
+        border-radius: 1.8rem;
+        border: none;
+        background-color: v.$color1;
+        cursor: pointer;
+        @include m.desktop_1020 {
+            width: 25rem;
+            height: 5.5rem;
+        }
+        h3 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.8rem;
+            @include m.desktop_1020 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
