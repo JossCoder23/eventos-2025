@@ -20,4 +20,59 @@ window.addEventListener("load", () => {
         }
     });
 
+    let buttonTutor = document.querySelector(".buttonWrapper1");
+    let inputTutor = document.querySelectorAll(".firstAparition");
+
+    let buttonTutorMobile = document.querySelector(".buttonWrapperMobile1");
+    let inputTutorMobile = document.querySelectorAll(".firstAparitionMobile");
+
+    let buttonAcompa = document.querySelector(".buttonWrapper2");
+    let inputAcompa = document.querySelectorAll(".secondAparition");
+
+    buttonTutor.addEventListener("change", (ev) => { 
+        if ( ev.currentTarget.checked ) {
+            inputTutor.forEach(tutor => {
+                tutor.style.display = "flex";
+            })
+        } else {
+            inputTutor.forEach(tutor => {
+                tutor.style.display = "none";
+                inputAcompa.forEach(acom => {
+                    acom.style.display = "none";
+                })
+            })
+            buttonAcompa.checked = false;
+        }
+    })
+
+    buttonTutorMobile.addEventListener("change", (ev) => { 
+        alert("hice click")
+        if ( ev.currentTarget.checked ) {
+            inputTutorMobile.forEach(tutor => {
+                tutor.style.display = "flex";
+            })
+        } else {
+            inputTutorMobile.forEach(tutor => {
+                tutor.style.display = "none";
+                // inputAcompa.forEach(acom => {
+                //     acom.style.display = "none";
+                // })
+            })
+            // buttonAcompa.checked = false;
+        }
+    })
+
+    buttonAcompa.addEventListener("change", (ev) => { 
+        if ( ev.currentTarget.checked ) {
+            inputAcompa.forEach(acom => {
+                acom.style.display = "flex";
+            })
+        } else {
+            inputAcompa.forEach(acom => {
+                acom.style.display = "none";
+            })
+        }
+    })
+
+
 })

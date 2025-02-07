@@ -40,9 +40,6 @@ html(lang="es")
                             h4 y <span>Wendy Ramos</span>
                     .bloque1Right
                         .bloque3Left.bloque3LeftDesktop
-                            //- img.bloque1FormContentMobile1(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/shield-mobile-1.webp", alt="")
-                            //- img.bloque1FormContentMobile2(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/shield-mobile-2.webp", alt="")
-                            //- h4 ¡Cerramos Inscripciones!
                             .bloque1Form
                                 .bloque1FormTitle
                                     h3 Agenda tu visita y 
@@ -53,11 +50,24 @@ html(lang="es")
                                 .bloque1FormDouble
                                     input(type="text" placeholder="Tipo de documento*")
                                     input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
-                                //- input(type="text" placeholder="Celular*")
-                                //- input(type="text" placeholder="Correo electrónico*")
-                                //- input(type="text" placeholder="Seleccionar horario de visita*")
-                                //- input(type="text" placeholder="Seleccionar carrera*")
-                                //- input(type="text" placeholder="¿Qué grado estás cursando en el colegio?*")
+                                .bloque1TopFormContainer--terminos
+                                    input.buttonWrapper1(type="checkbox", name="")
+                                    h3 Datos de tutores o padres.
+                                .bloque1FormDouble.firstAparition
+                                    input(type="text" placeholder="Nombres*")
+                                    input(type="text" placeholder="Apellidos*")
+                                .bloque1FormDouble.firstAparition
+                                    input(type="text" placeholder="Tipo de documento*")
+                                    input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
+                                .bloque1TopFormContainer--terminos.firstAparition
+                                    input.buttonWrapper2(type="checkbox", name="")
+                                    h3 ¿Irá un acompañante?.
+                                .bloque1FormDouble.secondAparition
+                                    input(type="text" placeholder="Nombres*")
+                                    input(type="text" placeholder="Apellidos*")
+                                .bloque1FormDouble.secondAparition
+                                    input(type="text" placeholder="Tipo de documento*")
+                                    input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
                                 .bloque1TopFormContainer--terminos
                                     input(type="checkbox", name="")
                                     h3 Política de privacidad y términos de servicio.
@@ -111,24 +121,32 @@ html(lang="es")
                     //- h4 ¡Cerramos Inscripciones!
                     .bloque1Form
                         .bloque1FormTitle
-                            h3 Déjanos tus datos y vive la experiencia Cayetano
-                        input(type="text" placeholder="Nombres*")
-                        input(type="text" placeholder="Apellidos*")
-                        input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
-                        input(type="text" placeholder="Celular*")
+                            h3 Agenda tu visita y 
+                                span vive la experiencia Cayetano
+                        .bloque1FormDouble
+                            input(type="text" placeholder="Nombres*")
+                            input(type="text" placeholder="Apellidos*")
+                        .bloque1FormDouble
+                            input(type="text" placeholder="Tipo de documento*")
+                            input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
                         .bloque1TopFormContainer--terminos
-                            input(type="checkbox", name="")
+                            input.buttonWrapperMobile1(type="checkbox", name="")
                             h3 Datos de tutores o padres.
-                        //- input.tutorMobilInput(type="text" placeholder="Correo electrónico*")
-                        //- input.tutorMobilInput(type="text" placeholder="Seleccionar horario de visita*")
-                        //- input.tutorMobilInput(type="text" placeholder="Seleccionar carrera*")
-                        //- input.tutorMobilInput(type="text" placeholder="¿Qué grado estás cursando en el colegio?*")
-                        //- .bloque1TopFormContainer--terminos
-                        //-     input(type="checkbox", name="")
-                        //-     h3 ¿Irá un acompañante?.
-                        //- input.AcomMobilInput(type="text" placeholder="Correo electrónico*")
-                        //- input.AcomMobilInput(type="text" placeholder="Seleccionar horario de visita*")
-                        //- input.AcomMobilInput(type="text" placeholder="Seleccionar horario de visita*")
+                        .bloque1FormDouble.firstAparition.firstAparitionMobile
+                            input(type="text" placeholder="Nombres*")
+                            input(type="text" placeholder="Apellidos*")
+                        .bloque1FormDouble.firstAparition.firstAparitionMobile
+                            input(type="text" placeholder="Tipo de documento*")
+                            input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
+                        .bloque1TopFormContainer--terminos.firstAparition.firstAparitionMobile
+                            input.buttonWrapper2(type="checkbox", name="")
+                            h3 ¿Irá un acompañante?.
+                        .bloque1FormDouble.secondAparition
+                            input(type="text" placeholder="Nombres*")
+                            input(type="text" placeholder="Apellidos*")
+                        .bloque1FormDouble.secondAparition
+                            input(type="text" placeholder="Tipo de documento*")
+                            input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
                         .bloque1TopFormContainer--terminos
                             input(type="checkbox", name="")
                             h3 Política de privacidad y términos de servicio.
